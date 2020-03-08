@@ -6,9 +6,13 @@ import Vue from 'vue'
 
 import VueRouter from 'vue-router'
 
+import Vuetify from 'vuetify'
+
 import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(VueRouter)
+
+Vue.use(Vuetify);
 
 window.events = new Vue();
 
