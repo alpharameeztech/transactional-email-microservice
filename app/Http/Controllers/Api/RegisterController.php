@@ -44,6 +44,12 @@ class RegisterController extends ApiController
         ]);
 
         /*
+         * broadcast the event
+         * on new user registration
+         */
+        event(new NewUserRegistered($user));
+
+        /*
          * Save the response
          * to pass it after logging
          */

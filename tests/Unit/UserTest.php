@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Events\NewUserRegistered;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
 class UserTest extends TestCase
@@ -86,4 +87,42 @@ class UserTest extends TestCase
             ->assertStatus(400);
     }
 
+    /**
+     * Fire an event 'NewUserRegistered'
+     * when a new user is registered
+     *
+     * @test
+     */
+    public function fire_an_event_when_a_new_user_is_registered()
+    {
+        Event::fake();
+
+        /*
+       *  Generate a fake password
+       */
+        $password = $this->faker->password;
+
+        /*
+         *  Generate data for a new user
+         */
+        $data = [
+            'name' => $this->faker->name,
+            'email' => $this->faker->email,
+            'password' => $password,
+            'password_confirmation' => $password
+        ];
+
+        /*
+        * Create a new user
+        */
+        $this->post(
+            route('user.register'), $data);
+
+        /*
+         * An event is fired
+         * when a user is successfully registered
+         */
+        Event::assertDispatched(NewUserRegistered::class);
+
+    }
 }
