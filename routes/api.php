@@ -19,4 +19,6 @@ Route::group([
 
     Route::post('/send/email', 'Api\EmailController@send')->name('send.email');
 
+    Route::post('/register', 'Api\RegisterController@register')->name('user.register');
+
 });
