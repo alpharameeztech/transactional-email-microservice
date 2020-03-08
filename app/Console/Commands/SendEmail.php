@@ -54,6 +54,15 @@ class SendEmail extends Command
             'message' => ['required', 'max:255']
         ]);
 
+        if ($validator->fails()) {
+            $this->info('Failed to send email. Please make sure to provide correct necessary information.');
+
+            foreach ($validator->errors()->all() as $error) {
+                $this->error($error);
+            }
+            return 1;
+        }
+
         $this->info('Sit tight, email is on its way...');
 
         $data = array(
