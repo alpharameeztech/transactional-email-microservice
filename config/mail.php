@@ -133,4 +133,15 @@ return [
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
+    /*
+     * Set the default email service provider
+     */
+    'service' => env('DEFAULT_EMAIL_SERVICE', 'MailJet'),
+
+    /*
+     * List of fallback email service providers
+     */
+    'fallbacks' => [
+        'SendGrid'
+    ],
 ];
