@@ -1,3 +1,5 @@
+import router from "./components/router";
+
 require('./bootstrap');
 
 import Vue from 'vue'
