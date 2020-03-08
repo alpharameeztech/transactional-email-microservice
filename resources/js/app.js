@@ -16,6 +16,10 @@ Vue.use(Vuetify);
 
 window.events = new Vue();
 
+Vue.component(
+    'loader-component',
+    require('./components/Loader.vue').default);
+
 new Vue({
     el: '#app',
     router,
