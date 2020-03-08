@@ -10,7 +10,7 @@
     <div class="">
 
         <div class="my-2">
-            asdasd
+            <app-header></app-header>
         </div>
 
     </div>
