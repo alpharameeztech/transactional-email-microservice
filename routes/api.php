@@ -21,4 +21,6 @@ Route::group([
 
     Route::post('/register', 'Api\RegisterController@register')->name('user.register');
 
+    Route::post('/forgot/password', 'Api\ForgotPasswordController@getResetToken')->name('forgot.password');
+
 });
