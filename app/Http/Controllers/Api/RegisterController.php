@@ -22,6 +22,16 @@ class RegisterController extends ApiController
 
         $validator = $this->validateData($request);
 
+        /*
+         * if the validation failed
+         * then return the appropiate errors
+         */
+        if($validator->fails()){
+
+            return $this->setStatusCode(HttpRespnse::HTTP_BAD_REQUEST)
+                ->respondWithError($validator->errors());
+
+        }
 
         /*
          * validation is passed
