@@ -64,6 +64,8 @@ class ResetPasswordController extends ApiController
 
         if ($request->wantsJson()) {
 
+            if ($response == Password::PASSWORD_RESET) {
+
                 /*
                  *  If password has been successfully reset
                  *  then generate a success response
@@ -80,6 +82,18 @@ class ResetPasswordController extends ApiController
 
                 return $response;
 
+            } else {
+
+                /*
+                 *  If the validation failed to reset password
+                 *  generate a json response
+                 */
+                return $this->setStatusCode(HttpRespnse::HTTP_BAD_REQUEST)
+                    ->respondWithError([
+                        'result' => trans($response),
+                        'email' => $request->input('email'),
+                    ]);
+            }
         }
 
     }
