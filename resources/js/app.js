@@ -22,7 +22,7 @@ Vue.component(
 
 Vue.component(
     'flash-component',
-    require('./components/FlashComponent.vue').default);
+    require('./components/Flash.vue').default);
 
 new Vue({
     el: '#app',
