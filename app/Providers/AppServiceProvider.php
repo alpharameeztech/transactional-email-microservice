@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        app()->bind('SendGrid', function ($app) {
+            return new \App\Interfaces\EmailInterface\Implementations\SendGrid(env('SENDGRID_API_KEY'));
+        });
     }
 }
