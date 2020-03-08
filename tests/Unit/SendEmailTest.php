@@ -151,4 +151,5 @@ class SendEmailTest extends TestCase
 
         $this->assertNotEquals($defaultEmailService, $emailServiceUsedToSendEmail);
     }
+
 }
