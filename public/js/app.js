@@ -35215,6 +35215,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 window.events = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
+  router: router,
   vuetify: new Vuetify({
     icons: {
       iconfont: 'mdi' // default - only for display purposes

@@ -12,6 +12,7 @@ window.events = new Vue();
 
 new Vue({
     el: '#app',
+    router,
     vuetify: new Vuetify({
         icons: {
             iconfont: 'mdi', // default - only for display purposes
