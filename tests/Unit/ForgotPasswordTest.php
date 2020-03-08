@@ -45,4 +45,47 @@ class ForgotPasswordTest extends TestCase
 
     }
 
+    /**
+     * Cannot get a token if invalid
+     * email address is provided
+     *
+     *@test
+     */
+    public function get_an_error_on_invalid_email_address_provided_on_forgot_password()
+    {
+        /*
+        *  Generate a fake password
+        */
+        $password = $this->faker->password;
+
+        /*
+         *  Generate data for a new user
+         */
+        $data = [
+            'name' => $this->faker->name,
+            'email' => $this->faker->email,
+            'password' => $password,
+            'password_confirmation' => $password
+        ];
+
+        /*
+         *  Create a new user
+         */
+        $this->post(route('user.register'), $data);
+
+        /*
+         * make the user email invalid
+         */
+        $data['email'] = Str::random() . $data['email'];
+
+        /*
+         *  Throw an error
+         *  when an invalid email is provided
+         *  when try to receive a token
+         */
+        $this->json('Post', route('forgot.password'), $data,[
+            'Accept' => 'application/json'
+        ])
+            ->assertStatus(400);
+    }
 }

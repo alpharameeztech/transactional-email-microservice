@@ -56,6 +56,17 @@ class ForgotPasswordController extends ApiController
             $user = User::where('email', $request->input('email'))->first();
 
             /*
+             * Verify the provided email exist on the database
+             * if not then return the appropriate response
+             */
+            if (!$user) {
+
+                return $this->setStatusCode(HttpResponse::HTTP_BAD_REQUEST)
+                    ->respondWithError(trans('passwords.user'));
+
+            }
+
+            /*
              * generate a token for the password recovery
              */
             $token = $this->broker()->createToken($user);
