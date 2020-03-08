@@ -17,6 +17,10 @@ Vue.use(Vuetify);
 window.events = new Vue();
 
 Vue.component(
+    'app-header',
+    require('./components/Header.vue').default);
+
+Vue.component(
     'loader-component',
     require('./components/Loader.vue').default);
 
