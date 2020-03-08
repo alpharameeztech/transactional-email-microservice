@@ -23,4 +23,6 @@ Route::group([
 
     Route::post('/forgot/password', 'Api\ForgotPasswordController@getResetToken')->name('forgot.password');
 
+    Route::post('/password/reset', 'Api\ResetPasswordController@reset')->name('reset.password');
+
 });
