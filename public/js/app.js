@@ -77456,6 +77456,15 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_3___default.a);
 window.events = new vue__WEBPACK_IMPORTED_MODULE_1___default.a();
+
+window.flash = function (message) {
+  var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'success';
+  window.events.$emit('flash', {
+    message: message,
+    type: type
+  });
+};
+
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('app-header', __webpack_require__(/*! ./components/Header.vue */ "./resources/js/components/Header.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('loader-component', __webpack_require__(/*! ./components/Loader.vue */ "./resources/js/components/Loader.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('flash-component', __webpack_require__(/*! ./components/Flash.vue */ "./resources/js/components/Flash.vue")["default"]);
