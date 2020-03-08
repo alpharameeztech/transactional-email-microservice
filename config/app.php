@@ -225,6 +225,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'MailJet' => App\Interfaces\EmailInterface\Implementations\MailJet::class,
+        'SendGrid' => App\Interfaces\EmailInterface\Implementations\SendGrid::class
 
     ],
 
