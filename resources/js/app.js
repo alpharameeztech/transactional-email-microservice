@@ -20,6 +20,10 @@ Vue.component(
     'loader-component',
     require('./components/Loader.vue').default);
 
+Vue.component(
+    'flash-component',
+    require('./components/FlashComponent.vue').default);
+
 new Vue({
     el: '#app',
     router,

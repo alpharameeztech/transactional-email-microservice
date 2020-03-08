@@ -76665,6 +76665,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_3___default.a);
 window.events = new vue__WEBPACK_IMPORTED_MODULE_1___default.a();
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('loader-component', __webpack_require__(/*! ./components/Loader.vue */ "./resources/js/components/Loader.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('flash-component', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/FlashComponent.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
 new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#app',
   router: _components_router__WEBPACK_IMPORTED_MODULE_0__["default"],
