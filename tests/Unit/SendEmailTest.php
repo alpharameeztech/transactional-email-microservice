@@ -38,4 +38,33 @@ class SendEmailTest extends TestCase
 
     }
 
+    /**
+     *  Throw an error
+     *  when invalid request data is provided
+     *
+     * @test
+     */
+    public function throw_an_error_when_invalid_data_is_provided()
+    {
+        /*
+         * Prepare email's data to send
+         */
+        $data = [
+            'to' => $this->faker->email,
+            'subject' => $this->faker->sentence,
+            'message' => $this->faker->paragraph
+        ];
+
+        /*
+         * make the post request invalid
+         * by missing any field;
+         */
+        unset($data['to']);
+
+        $this->json('Post', route('send.email'), $data, [
+            'Content-Type' => 'application/json'
+        ])->assertStatus(400);
+
+
+    }
 }

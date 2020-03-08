@@ -6,6 +6,8 @@ use App\Jobs\SendEmail;
 use App\SentEmail;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\Response as HttpResponse;
+use Illuminate\Support\Facades\Validator;
 
 class EmailController extends ApiController
 {
@@ -20,6 +22,14 @@ class EmailController extends ApiController
     {
 
         $validatedData = $this->validateData($request);
+
+        /*
+         * If there are validation error
+         * return the appropriate response
+         */
+        if($this->getStatusCode() == HttpResponse::HTTP_BAD_REQUEST){
+            return $validatedData;
+        }
 
         /*
          * Send the email to the user
@@ -47,11 +57,28 @@ class EmailController extends ApiController
 
     protected function validateData(Request $request){
 
-        return $request->validate([
+        $validator = Validator::make($request->all(), [
             'to' => 'required|max:255',
             'subject' => 'required|max:255',
             'message' => 'required',
         ]);
+
+        if ($validator->fails()) {
+
+            return  $this->setStatusCode(400)
+                ->respondWithError([
+                    'result' => 'Oops, something went wrong',
+                    'error' => $validator->errors()
+                ]);
+
+        }else{
+
+            return $request->validate([
+                'to' => 'required|max:255',
+                'subject' => 'required|max:255',
+                'message' => 'required',
+            ]);
+        }
 
     }
 }
