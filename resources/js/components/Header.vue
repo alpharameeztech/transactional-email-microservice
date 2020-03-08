@@ -113,7 +113,9 @@
         data: () => ({
             dialog: false,
             drawer: null,
-            items: [],
+            items: [
+                { icon: 'queue', text: 'Compose Email', link: '/compose' },
+            ],
         }),
     }
 </script>

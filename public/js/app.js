@@ -2177,7 +2177,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       dialog: false,
       drawer: null,
-      items: []
+      items: [{
+        icon: 'queue',
+        text: 'Compose Email',
+        link: '/compose'
+      }]
     };
   }
 });
