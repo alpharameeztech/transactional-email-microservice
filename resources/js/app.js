@@ -10,9 +10,13 @@ import Vuetify from 'vuetify'
 
 import '@mdi/font/css/materialdesignicons.css'
 
+import ReadMore from 'vue-read-more';
+
 Vue.use(VueRouter)
 
 Vue.use(Vuetify);
+
+Vue.use(ReadMore);
 
 window.events = new Vue();
 
