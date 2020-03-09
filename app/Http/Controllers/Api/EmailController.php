@@ -13,6 +13,16 @@ class EmailController extends ApiController
 {
 
     /**
+     * Get all the sent emails.
+     *
+     * @return HttpResponse
+     */
+    public function index()
+    {
+        return SentEmail::get();
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param Request $request
