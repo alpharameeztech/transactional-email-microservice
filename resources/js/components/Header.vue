@@ -114,6 +114,7 @@
             dialog: false,
             drawer: null,
             items: [
+                { icon: 'dashboard', text: 'Dashboard', link: '/dashboard' },
                 { icon: 'queue', text: 'Compose Email', link: '/compose' },
                 { icon: 'mdi-email', text: 'Sent', link: '/sent' },
             ],

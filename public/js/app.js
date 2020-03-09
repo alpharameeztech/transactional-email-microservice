@@ -2178,6 +2178,10 @@ __webpack_require__.r(__webpack_exports__);
       dialog: false,
       drawer: null,
       items: [{
+        icon: 'dashboard',
+        text: 'Dashboard',
+        link: '/dashboard'
+      }, {
         icon: 'queue',
         text: 'Compose Email',
         link: '/compose'
@@ -38453,6 +38457,723 @@ var render = function() {
       ]
     )
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Transactional email microservice\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-justify" }, [
+        _vm._v(
+          "\n        This app is a simple email microservice built using Laravel 6, Vue 2 and, Vuetify 2.\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        The app sends an email to the recipient's email through the following:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("\n            API's endpoint\n        ")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            CLI\n        ")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            Frontend\n        ")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        The app utilizes the two email service providers:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("\n            MailJet\n        ")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            SendGrid\n        ")])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        The API's endpoint\n    ")
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v("\n            Post request to send an email: "),
+          _c("kbd", [_vm._v("[site.url]/api/v1/send/email")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("\n            Post request to register the user: "),
+          _c("kbd", [_vm._v("[site.url]/api/v1/register")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            Post request to generate forgot password token: "
+          ),
+          _c("kbd", [_vm._v("[site.url]/api/v1/forgot/password")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            Post request to reset password with the token: "
+          ),
+          _c("kbd", [_vm._v("[site.url]/api/v1/password/reset")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Why two email service providers?\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        The purpose of using the two email service providers is to utilize one service as a\n        default and the other as a fallback\n        service(which can be set under the "
+        ),
+        _c("code", [_vm._v("config/mail.php")]),
+        _vm._v(").\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "subtitle-2" },
+        [
+          _c("v-icon", [_vm._v("\n            info\n        ")]),
+          _vm._v(
+            "Note: The app has the flexibility to accept more than one fallback service.\n    "
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Installation Instructions\n    ")
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("Clone the repo")]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("Install composer dependencies using:\n            "),
+          _c("kbd", [_vm._v("composer install")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("Run migrations:\n            "),
+          _c("kbd", [_vm._v("php artisan migrate")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v(
+          "\n        How to verify that the fallback service is actually working?\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        The app first tries to send an email with whatever the default email service provider is set under the "
+        ),
+        _c("code", [_vm._v("config/mail.php")]),
+        _vm._v(":\n    ")
+      ]),
+      _vm._v(" "),
+      _c("code", [
+        _vm._v(
+          "\n        'service' => env('DEFAULT_EMAIL_SERVICE', 'MailJet'),\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "subtitle-2" },
+        [
+          _c("v-icon", [_vm._v("\n            info\n        ")]),
+          _vm._v(
+            "Note: DEFAULT_EMAIL_SERVICE variable value should be the exact name of any class defined under\n        "
+          ),
+          _c("kbd", [
+            _vm._v(
+              "[site.url]/app/Interfaces/EmailInterface/Implementations/[file].php"
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        The fallback email services are defined under the  'fallbacks' array of\n        "
+        ),
+        _c("code", [_vm._v("config/mail.php")]),
+        _vm._v(" file as:\n    ")
+      ]),
+      _vm._v(" "),
+      _c("code", [_vm._v("\n        'fallbacks' => [ 'SendGrid']\n    ")]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "subtitle-2" },
+        [
+          _c("v-icon", [_vm._v("\n            info\n        ")]),
+          _vm._v(
+            "Note: 'fallbacks' array value should be the exact name of any class defined under\n        "
+          ),
+          _c("kbd", [
+            _vm._v(
+              "[site.url]/app/Interfaces/EmailInterface/Implementations/[file].php"
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        So if for any reason, the default email service provider is down, the App changes the\n        "
+        ),
+        _c("code", [_vm._v("DEFAULT_EMAIL_SERVICE")]),
+        _vm._v(" variable value with any service(randomly) from the\n        "),
+        _c("code", [
+          _vm._v("\n            'fallbacks' => ['SendGrid']\n        ")
+        ]),
+        _vm._v(" array.\n    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "subtitle-2" },
+        [
+          _c("v-icon", [_vm._v("\n            info\n        ")]),
+          _vm._v(
+            "Note: One test specifically written to prove this fallback service.\n    "
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v(
+          "\n        How to add more email service provider as a fallback?\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        Lets say, MailGun needs to be added as a fallback email service, then following are stesp to follow:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "\n            Create a class named as 'MailGun'(name the file as same as ClassName)\n            under "
+          ),
+          _c("kbd", [
+            _vm._v(
+              "[site.url]/app/Interfaces/EmailInterface/Implementations/MailGun.php"
+            )
+          ]),
+          _vm._v(
+            ".\n            This class should implement Email Interface\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("Then add this class name under\n            "),
+          _c("code", [
+            _vm._v(
+              "\n                'fallbacks' => ['SendGrid', 'MailGun']\n            "
+            )
+          ]),
+          _vm._v("\n            array of  "),
+          _c("code", [_vm._v("config/mail.php")]),
+          _vm._v(" file\n        ")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Send an email through an API endpoint\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        API link: "),
+        _c("kbd", [_vm._v("[site.url]/api/v1/send/email")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        Headers: "),
+        _c("code", [_vm._v("Content-Type => application/json")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        Pass the data in json format including the following fields:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("Recipient's email as: 'to'")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Email's subject as: 'subject'")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Email's message body as: 'subject'")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        After sending the post request with the fields, the app will first try to send an email\n        with the default email service provider(as configured on 'config/mail.php').\n        If for any reason, the default service is down, the app will pick any fallback service from the array\n        defined in the '/config.mail.php' and send an email through that.\n        Once the email is send, then the following actions are performed:"
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("API response will receive.\n        ")]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            The response will have the status code and the email service provider name\n            through which the email is sent\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("The record is saved on the database table 'sent_emails'")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("A log entry is also created under 'laravel.log' file")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Take a look at the below screenshot which shows how to call this API endpoint using Postman."
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_with_api.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-weight-bold" }, [
+        _vm._v(
+          "\n        If invalid data is provided on send email API, an appropriate error response is returned, something similar to the screenshot below\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("v-system-bar", {
+        attrs: { dark: "", color: "primary", height: "5" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Send an email through CLI\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        A command is created to send an email from CLI\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        Run the following command to learn about this send email command:  "
+        ),
+        _c("kbd", [_vm._v(" php artisan send:email --help")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        Run this command to send an email from the CLI: "),
+        _c("kbd", [_vm._v("php artisan send:email")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Once you run the command, the CLI will prompt for the following fields:"
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("\n            Recipient's email\n        ")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            Email's subject\n        ")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            Email's body\n        ")])
+      ]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Something like that will appear")]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_cli.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        If you do not provide any of required fields, an error will appear on the CLI asking you for the missing fields.\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        With CLI, only the log entry is created(as shown in the below screenshot) when the email is sent(wont be storing the under the database).\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("v-system-bar", {
+        attrs: { dark: "", color: "primary", height: "5" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v("\n        Send an email through Frontend\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        A form is set up to compose an email.\n    ")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "When the email is successfully sent, following actions are performed:"
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "\n            An email will be sent with either the default email service provider(if no exception is thrown) or with the fallback service\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A log entry is created under 'laravel.log' file\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("The entry will be saved under the 'sent_emails' table")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("v-system-bar", {
+        attrs: { dark: "", color: "primary", height: "5" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v(
+          "\n        Consumer self-service endpoint for user registration\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        API link: "),
+        _c("kbd", [_vm._v("[site.url]/api/v1/register")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        A consumer self-service API endpoint exist to register a user.\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        This endpoint requires the following required fields:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v("\n            User name field as: 'name'\n        ")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("\n            User email fields as: 'email'\n        ")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("\n            User's password field as: 'password'\n        ")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            User's confirm password field as: 'password_confirmation'\n        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        When the user is successfully registered, the following actions are performed:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "\n            A json response received which will show the success message along with the service name used to send the welcome email\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_api.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [_vm._v("\n            A log entry created\n        ")]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_log_entry.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            User is successfully saved on the database\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A welcome email is sent to the user's email just registered\n        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-weight-bold" }, [
+        _vm._v(
+          "If user registration failed for any reason, an appropriate error response is returned"
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("v-system-bar", {
+        attrs: { dark: "", color: "primary", height: "5" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v(
+          "\n        Consumer self-service endpoint for forgot password\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        API link: "),
+        _c("kbd", [_vm._v("[site.url]/api/v1/forgot/password")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        An API endpoint exist to generate a token for password recovery if the user is registered with that email address.\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "When this API is called, following are the things that will happen:"
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "\n            A json response is returned with the appropriate status code and message\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A log entry is created on the 'laravel.log' file\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A password reset token is saved on the database table\n        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "subtitle-2" },
+        [
+          _c("v-icon", [_vm._v("\n            info\n        ")]),
+          _vm._v("Note: No email is send on forgot password API request.\n    ")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-weight-bold" }, [
+        _vm._v(
+          "\n        If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png"
+        }
+      }),
+      _vm._v(" "),
+      _c("v-system-bar", {
+        attrs: { dark: "", color: "primary", height: "5" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [
+        _vm._v(
+          "\n        Consumer self-service endpoint for password reset\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("\n        API link: "),
+        _c("kbd", [_vm._v("[site.url]/api/v1/password/reset")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        An API endpoint exist to reset a password based on the forgot password token.\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        When this API is called, following are the things that will happen:\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "\n            A json response is returned with the appropriate status code and message\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A log entry is created on the 'laravel.log' file\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          attrs: {
+            src:
+              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png"
+          }
+        }),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            A password reset token entry gets deleted(once the token is utilized)\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n            Password gets reset and saved on the database table\n        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "font-weight-bold" }, [
+        _vm._v(
+          "\n        If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src:
+            "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png"
+        }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -95636,6 +96357,59 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Dashboard.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/Dashboard.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=template&id=040e2ab9& */ "./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Dashboard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Dashboard.vue?vue&type=template&id=040e2ab9& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Flash.vue":
 /*!*******************************************!*\
   !*** ./resources/js/components/Flash.vue ***!
@@ -95991,19 +96765,27 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _emails_Compose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./emails/Compose */ "./resources/js/components/emails/Compose.vue");
-/* harmony import */ var _emails_Sent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./emails/Sent */ "./resources/js/components/emails/Sent.vue");
+/* harmony import */ var _Dashboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard */ "./resources/js/components/Dashboard.vue");
+/* harmony import */ var _emails_Compose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./emails/Compose */ "./resources/js/components/emails/Compose.vue");
+/* harmony import */ var _emails_Sent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./emails/Sent */ "./resources/js/components/emails/Sent.vue");
+
 
 
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   mode: 'history',
   routes: [{
+    path: '/',
+    component: _Dashboard__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, {
+    path: '/dashboard',
+    component: _Dashboard__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, {
     path: '/compose',
-    component: _emails_Compose__WEBPACK_IMPORTED_MODULE_1__["default"]
+    component: _emails_Compose__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/sent',
-    component: _emails_Sent__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _emails_Sent__WEBPACK_IMPORTED_MODULE_3__["default"]
   }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
