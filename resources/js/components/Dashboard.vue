@@ -344,6 +344,56 @@
             height="5"
         ></v-system-bar>
 
+        <p class="title">
+            Consumer self-service endpoint for forgot password
+        </p>
+
+        <p>
+            API link: <kbd>[site.url]/api/v1/forgot/password</kbd>
+        </p>
+
+        <p>
+            An API endpoint exist to generate a token for password recovery if the user is registered with that email address.
+        </p>
+
+        <p>When this API is called, following are the things that will happen:</p>
+
+        <ul>
+            <li>
+                A json response is returned with the appropriate status code and message
+            </li>
+
+            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png" />
+
+            <li>
+                A log entry is created on the 'laravel.log' file
+            </li>
+
+            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png" />
+
+            <li>
+                A password reset token is saved on the database table
+            </li>
+        </ul>
+
+        <p class="subtitle-2">
+            <v-icon>
+                info
+            </v-icon>Note: No email is send on forgot password API request.
+        </p>
+
+        <p class="font-weight-bold">
+            If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below
+        </p>
+
+        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png" />
+
+        <v-system-bar
+            dark
+            color="primary"
+            height="5"
+        ></v-system-bar>
+
     </v-container>
 </template>
 
