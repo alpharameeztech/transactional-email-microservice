@@ -394,6 +394,50 @@
             height="5"
         ></v-system-bar>
 
+        <p class="title">
+            Consumer self-service endpoint for password reset
+        </p>
+
+        <p>
+            API link: <kbd>[site.url]/api/v1/password/reset</kbd>
+        </p>
+
+        <p>
+            An API endpoint exist to reset a password based on the forgot password token.
+        </p>
+
+        <p>
+            When this API is called, following are the things that will happen:
+        </p>
+
+        <ul>
+            <li>
+                A json response is returned with the appropriate status code and message
+            </li>
+
+            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png" />
+
+            <li>
+                A log entry is created on the 'laravel.log' file
+            </li>
+
+            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png" />
+
+            <li>
+                A password reset token entry gets deleted(once the token is utilized)
+            </li>
+
+            <li>
+                Password gets reset and saved on the database table
+            </li>
+        </ul>
+
+        <p class="font-weight-bold">
+            If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below
+        </p>
+
+        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png" />
+
     </v-container>
 </template>
 
