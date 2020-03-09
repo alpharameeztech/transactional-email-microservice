@@ -16,10 +16,30 @@
             :items="sentEmails"
             :search="search"
         >
+            <template v-slot:item.message="{ item }">
+                <v-row  class="d-flex justify-end">
+                    {{ item.message}}
+                    <v-chip
+                        class="ma-2"
+                        color="primary"
+                        outlined
+                        pill
+                    >
+                        <v-avatar left>
+                            <v-icon>av_timer</v-icon>
+                        </v-avatar>
+
+                        {{ ago(item.created_at) }}
+
+                    </v-chip>
+                </v-row>
+            </template>
         </v-data-table>
     </v-card>
 </template>
 <script>
+
+    import moment from 'moment';
 
     export default {
         data () {
@@ -65,7 +85,14 @@
                         self.$root.$emit('loading', false)
 
                     });
-            }
+            },
+            ago(date){
+
+                moment.locale();
+
+                return moment.utc(date).fromNow();
+
+            },
         },
         mounted() {
             this.getSendEmails()
