@@ -39005,11 +39005,16 @@ var render = function() {
                   "v-row",
                   { staticClass: "d-flex justify-end" },
                   [
-                    _vm._v(
-                      "\n                " +
-                        _vm._s(item.message) +
-                        "\n                "
-                    ),
+                    _c("read-more", {
+                      attrs: {
+                        "more-str": "read more",
+                        text: item.message,
+                        link: "#",
+                        "less-str": "read less",
+                        "max-chars": 200
+                      }
+                    }),
+                    _vm._v(" "),
                     _c(
                       "v-chip",
                       {

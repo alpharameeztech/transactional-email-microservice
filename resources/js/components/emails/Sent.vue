@@ -18,7 +18,7 @@
         >
             <template v-slot:item.message="{ item }">
                 <v-row  class="d-flex justify-end">
-                    {{ item.message}}
+                    <read-more more-str="read more" :text="item.message" link="#" less-str="read less" :max-chars="200"></read-more>
                     <v-chip
                         class="ma-2"
                         color="primary"
