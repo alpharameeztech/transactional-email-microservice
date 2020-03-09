@@ -25,4 +25,6 @@ Route::group([
 
     Route::post('/password/reset', 'Api\ResetPasswordController@reset')->name('reset.password');
 
+    Route::get('/sent/emails', 'Api\EmailController@index')->name('sent.emails');
+
 });
