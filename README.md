@@ -24,3 +24,13 @@ The app utilizes the two email service providers:
 The purpose of using the two email service providers is to utilize one service as a default and the other as a fallback service(which can be set under the config/mail.php).
 
 **Note: The app has the flexibility to accept more than one fallback service.**
+
+## Installation Instructions without Docker
+
+- Clone the repo
+- Run following commands:
+```
+composer install
+npm install
+php artisan migrate
+```
