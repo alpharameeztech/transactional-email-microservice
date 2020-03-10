@@ -186,3 +186,27 @@ When the user is successfully registered, the actions are taken:
 **Note:** If user registration failed for any reason, an appropriate error response is returned as the screenshot below
 
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png)
+
+## Consumer self-service endpoint for forgot password
+
+**API link:** ```[site.url]/api/v1/forgot/password```
+
+**Request Type:** ```Post```
+
+An API endpoint exist to generate a token for password recovery if the user is registered with that email address.
+
+When this API is called, following are the things that will happen:
+
+- A json response is returned with the appropriate status code and message
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png)
+
+- A log entry is created on the 'laravel.log' file
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png)
+
+- A password reset token is saved on the database table
+
+**Note: No email is send on forgot password API request.**
+
+**Note:** If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png)
