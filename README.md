@@ -160,3 +160,29 @@ When the email is successfully sent, following actions are taken:
 - A log entry is created under 'laravel.log' file
 
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png)
+
+## Consumer self-service endpoint for user registration
+**API link:** ```[site.url]/api/v1/register```
+
+**Request Type:** ```Post```
+
+A consumer self-service API endpoint exist to register a user.
+This endpoint requires the following required fields:
+
+- User name field as: 'name'
+- User email fields as: 'email'
+- User's password field as: 'password' 
+- User's confirm password field as: 'password_confirmation'
+   
+When the user is successfully registered, the actions are taken:
+
+- A json response received which will show the success message along with the service name used to send the welcome email
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_api.png)
+- A log entry created
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_log_entry.png)
+- User is successfully saved on the database
+- A welcome email is sent to the user's email just registered
+
+**Note:** If user registration failed for any reason, an appropriate error response is returned as the screenshot below
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png)
