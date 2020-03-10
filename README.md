@@ -75,3 +75,15 @@ service provider from any fallback service list
 ```
 
 **Note: One test specifically written to prove this fallback service.**
+
+## How to add more email service provider as a fallback?
+
+Lets say, MailGun needs to be added as a fallback email service, then following are the steps to follow:
+
+- Create a class named as 'MailGun'(name the file as same as ClassName) under [site.ur]/app/Interfaces/EmailInterface/Implementations/MailGun.php. This class should implement Email Interface
+
+- Then add this class name under 'config/mail.php'
+    
+```
+    'fallbacks' => ['SendGrid', 'MailGun']
+```
