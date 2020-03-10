@@ -87,3 +87,35 @@ Lets say, MailGun needs to be added as a fallback email service, then following 
 ```
     'fallbacks' => ['SendGrid', 'MailGun']
 ```
+
+## Send an email through an API endpoint
+
+**API link:** ```[site.url]/api/v1/send/email```
+
+**Headers:** ```Content-Type => application/json```
+
+**Request Type:** ```Post```
+
+Pass the data in json format including the following fields:
+
+- Recipient's email as: 'to'
+- Email's subject as: 'subject'
+- Email's message body as: 'subject'
+
+After sending the post request with the fields, the app will first try to send an email with the default email service provider(as configured on 'config/mail.php'). If for any reason, the default service is down, the app will pick any fallback service from the array defined in the '/config.mail.php' and send an email through that. 
+
+Once the email is send, then the following actions are taken:
+
+- API response will receive.  
+- The response will have the status code and the email service provider name through which the email is sent
+- The record is saved on the database table 'sent_emails'
+- A log entry is also created under 'laravel.log' file
+
+Take a look at the below screenshot which shows the success response when send a
+request to this API endpoint using Postman.
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_with_api.png)
+
+**Note:**If invalid data is provided on send email API, an appropriate error response is returned, something similar to the screenshot below
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png)
