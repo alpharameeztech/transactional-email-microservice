@@ -148,3 +148,15 @@ If you do not provide any of required fields, an error will appear on the CLI as
 **With CLI, only the log entry is created(as shown in the below screenshot) when the email is sent(wont be storing the under the database)**.
 
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png)
+
+## Send an email through Frontend
+
+A form is set up to compose an email.
+
+When the email is successfully sent, following actions are taken:
+
+- An email will be sent with either the default email service provider(if no exception is thrown) or with the fallback service
+- Record gets saved to the database   
+- A log entry is created under 'laravel.log' file
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png)
