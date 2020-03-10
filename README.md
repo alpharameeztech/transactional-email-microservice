@@ -34,3 +34,18 @@ composer install
 npm install
 php artisan migrate
 ```
+
+## Installation Instructions with Docker
+
+Run the following command:  
+
+```
+docker-compose up
+docker-compose exec app php artisan key:generate
+docker-compose exec app php artisan config:cache
+docker-compose exec app php artisan migrate
+
+```
+As a final step, visit http://your_server_ip in the browser
+
+**Note:** Create a user for MySQL
