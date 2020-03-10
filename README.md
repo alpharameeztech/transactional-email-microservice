@@ -19,3 +19,8 @@ The app utilizes the two email service providers:
 - Post request to register the user: ```[site.url]/api/v1/register```
 - Post request to generate forgot password token: ```[site.url]/api/v1/forgot/password```
 - Post request to reset password with the token: ```[site.url]/api/v1/password/reset```
+
+## Why two email service providers?
+The purpose of using the two email service providers is to utilize one service as a default and the other as a fallback service(which can be set under the config/mail.php).
+
+**Note: The app has the flexibility to accept more than one fallback service.**
