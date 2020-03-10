@@ -210,3 +210,24 @@ When this API is called, following are the things that will happen:
 **Note:** If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below
 
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png)
+
+## Consumer self-service endpoint for password reset
+
+**API link:** ```[site.url]/api/v1/password/reset```
+
+**Request Type:** ```Post```
+
+An API endpoint exist to reset a password based on the forgot password token.
+
+When this API is called, following are the things that will happen:
+
+- A json response is returned with the appropriate status code and message
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png)
+
+- A log entry is created on the 'laravel.log' file
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png)
+- A password reset token entry gets deleted(once the token is utilized)
+- Password gets reset and saved on the database table
+
+**Note:** If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png)
