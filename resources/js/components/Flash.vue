@@ -7,7 +7,7 @@
             align="center"
             justify="center"
         >
-            <div v-show="show">
+            <div v-show="show" v-cloak>
                 <v-alert text dense :type="type">
                     {{ body }}
                 </v-alert>
