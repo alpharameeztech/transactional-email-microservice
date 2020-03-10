@@ -119,3 +119,32 @@ request to this API endpoint using Postman.
 **Note:**If invalid data is provided on send email API, an appropriate error response is returned, something similar to the screenshot below
 
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png)
+
+## Send an email through CLI
+
+A command is created to send an email from CLI.
+
+Run the following command to learn about this send email command:
+```
+ php artisan send:email --help
+```
+
+Run this command to send an email from the CLI:
+```
+php artisan send:email
+```
+Once you run the command, the CLI will prompt for the following fields:
+ 
+-Recipient's email
+- Email's subject
+- Email's body
+ 
+Something like that will appear
+ 
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_cli.png)
+
+If you do not provide any of required fields, an error will appear on the CLI asking you for the missing fields.
+
+**With CLI, only the log entry is created(as shown in the below screenshot) when the email is sent(wont be storing the under the database)**.
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png)
