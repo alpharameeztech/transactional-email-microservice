@@ -12,3 +12,10 @@ The app utilizes the two email service providers:
 - SendGrid
  
  **Note:** At the moment, the app supports only one recipient's email address when sending an email.
+
+## The API's endpoint
+
+- Post request to send an email: ```[site.url]/api/v1/send/email```
+- Post request to register the user: ```[site.url]/api/v1/register```
+- Post request to generate forgot password token: ```[site.url]/api/v1/forgot/password```
+- Post request to reset password with the token: ```[site.url]/api/v1/password/reset```
