@@ -231,3 +231,29 @@ When this API is called, following are the things that will happen:
 
 **Note:** If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below
 ![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png)
+
+## About frontend
+
+Frontend is a single page application built using Vue and Vuetify and it composed of mainly three pages:
+
+- Dashboard
+- Compose Email
+- Sent(Emails)
+
+**Dashboard:**
+
+The Dashboard is a simple text page that describes about the application functionality.
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_dashboard.png)
+
+**Compose Email:**
+
+This page includes a simple form to send an email.
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_composer_email.png)
+
+**Sent Emails:**
+
+The page will list all the emails that have been sent successfully.
+
+![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_sent_emails.png)
