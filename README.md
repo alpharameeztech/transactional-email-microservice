@@ -27,10 +27,11 @@ The purpose of using the two email service providers is to utilize one service a
 
 ## Installation Instructions without Docker
 
-- Clone the repo
 - Run following commands:
 ```
+git clone https://github.com/alpharameeztech/transactional-email-microservice.git
 composer install
+cp .env.example .env
 npm install
 php artisan migrate
 ```
@@ -40,6 +41,9 @@ php artisan migrate
 Run the following command:  
 
 ```
+git clone https://github.com/alpharameeztech/transactional-email-microservice.git
+docker run --rm -v $(pwd):/app composer install
+cp .env.example .env
 docker-compose up
 docker-compose exec app php artisan key:generate
 docker-compose exec app php artisan config:cache
