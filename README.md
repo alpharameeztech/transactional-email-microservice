@@ -49,3 +49,29 @@ docker-compose exec app php artisan migrate
 As a final step, visit http://your_server_ip in the browser
 
 **Note:** Create a user for MySQL
+
+## How to verify that the fallback service is actually working?
+The app first tries to send an email with whatever the default email service provider is set under the config/mail.php:
+```
+'service' => env('DEFAULT_EMAIL_SERVICE', 'MailJet'),
+```
+
+**Note: DEFAULT_EMAIL_SERVICE variable value should be the exact name of any class defined under [site.url]/app/Interfaces/EmailInterface/Implementations/[file].php**
+
+The fallback email services are defined under the 'fallbacks' array of config/mail.php file as:
+```
+  'fallbacks' => [ 'SendGrid']
+```
+
+**Note: 'fallbacks' array value should be the exact name of any class defined under [site.url]/app/Interfaces/EmailInterface/Implementations/[file].php**
+
+So if for any reason, the default email service provider is down, the App changes the default email
+service provider from any fallback service list
+
+```
+'service' => env('DEFAULT_EMAIL_SERVICE', 'MailJet')
+
+'fallbacks' => ['SendGrid']
+```
+
+**Note: One test specifically written to prove this fallback service.**
