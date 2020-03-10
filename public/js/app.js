@@ -2169,6 +2169,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     source: String
@@ -39478,6 +39495,30 @@ var render = function() {
           _c("router-view"),
           _vm._v(" "),
           _c("loader-component")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-footer",
+        { staticClass: "font-weight-medium", attrs: { fixed: "", dark: "" } },
+        [
+          _c(
+            "v-col",
+            { staticClass: "text-center", attrs: { cols: "12" } },
+            [
+              _vm._v("\n            Made with "),
+              _c("v-icon", [_vm._v("favorite")]),
+              _vm._v("\n            by\n            "),
+              _c("strong", [
+                _vm._v("\n                Rameez Israr\n            ")
+              ]),
+              _vm._v(
+                "\n            (future member of the Takeaway.com)\n        "
+              )
+            ],
+            1
+          )
         ],
         1
       )

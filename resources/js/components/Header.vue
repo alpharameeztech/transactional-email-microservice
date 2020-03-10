@@ -101,6 +101,23 @@
             <loader-component></loader-component>
 
         </v-content>
+        <v-footer
+            fixed
+            class="font-weight-medium"
+            dark
+        >
+            <v-col
+                class="text-center"
+                cols="12"
+            >
+                Made with <v-icon>favorite</v-icon>
+                by
+                <strong>
+                    Rameez Israr
+                </strong>
+                (future member of the Takeaway.com)
+            </v-col>
+        </v-footer>
 
     </v-app>
 </template>
