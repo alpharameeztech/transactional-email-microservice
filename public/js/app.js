@@ -43538,7 +43538,7 @@ var render = function() {
             [
               _c("a", { attrs: { href: "/" } }, [
                 _c("span", { staticClass: "hidden-sm-and-down" }, [
-                  _vm._v("Takeaway.com")
+                  _vm._v("Email Service")
                 ])
               ])
             ]

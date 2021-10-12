@@ -87,7 +87,7 @@
                 class="ml-0 pl-4"
             >
                 <a href="/">
-                    <span class="hidden-sm-and-down">Takeaway.com</span>
+                    <span class="hidden-sm-and-down">Email Service</span>
                 </a>
             </v-toolbar-title>
             <v-spacer />
