@@ -56,7 +56,8 @@ class SendEmail implements ShouldQueue
      */
     public function failed(Exception $exception)
     {
-
+        \Log::info('Something went wrong. Executing fallback service');
+        
         /*
          * the default email service
          * not able to send an email
