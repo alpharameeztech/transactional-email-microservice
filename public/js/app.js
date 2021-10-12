@@ -2185,7 +2185,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     source: String
@@ -43575,10 +43574,7 @@ var render = function() {
               _vm._v("\n            by\n            "),
               _c("strong", [
                 _vm._v("\n                Rameez Israr\n            ")
-              ]),
-              _vm._v(
-                "\n            (future member of the Takeaway.com)\n        "
-              )
+              ])
             ],
             1
           )

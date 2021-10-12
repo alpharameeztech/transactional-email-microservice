@@ -115,7 +115,6 @@
                 <strong>
                     Rameez Israr
                 </strong>
-                (future member of the Takeaway.com)
             </v-col>
         </v-footer>
 
