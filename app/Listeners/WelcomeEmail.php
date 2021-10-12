@@ -41,7 +41,7 @@ class WelcomeEmail implements ShouldQueue
         $data = [
             'to' => $user['email'],
             'subject' => 'Thank you for registration',
-            'message' => 'You have successfully registered with Takeaway.com'
+            'message' => 'You have successfully registered'
         ];
 
         /*
