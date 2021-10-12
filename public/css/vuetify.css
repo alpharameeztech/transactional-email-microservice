@@ -14413,7 +14413,6 @@ html {
 }
 
 .v-image__image--preload {
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -16052,19 +16051,11 @@ html {
   left: 0;
 }
 
-.v-select.v-input--is-dirty ::-webkit-input-placeholder {
-  color: transparent !important;
-}
-
 .v-select.v-input--is-dirty ::-moz-placeholder {
   color: transparent !important;
 }
 
 .v-select.v-input--is-dirty :-ms-input-placeholder {
-  color: transparent !important;
-}
-
-.v-select.v-input--is-dirty ::-ms-input-placeholder {
   color: transparent !important;
 }
 
@@ -16186,11 +16177,6 @@ html {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.theme--light.v-input input::-webkit-input-placeholder,
-.theme--light.v-input textarea::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.38);
-}
-
 .theme--light.v-input input::-moz-placeholder,
 .theme--light.v-input textarea::-moz-placeholder {
   color: rgba(0, 0, 0, 0.38);
@@ -16201,24 +16187,11 @@ html {
   color: rgba(0, 0, 0, 0.38);
 }
 
-.theme--light.v-input input::-ms-input-placeholder,
-.theme--light.v-input textarea::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.38);
-}
-
-.theme--light.v-input input::-webkit-input-placeholder, .theme--light.v-input textarea::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.38);
-}
-
 .theme--light.v-input input::-moz-placeholder, .theme--light.v-input textarea::-moz-placeholder {
   color: rgba(0, 0, 0, 0.38);
 }
 
 .theme--light.v-input input:-ms-input-placeholder, .theme--light.v-input textarea:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.38);
-}
-
-.theme--light.v-input input::-ms-input-placeholder, .theme--light.v-input textarea::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.38);
 }
 
@@ -16238,11 +16211,6 @@ html {
   color: #fff;
 }
 
-.theme--dark.v-input input::-webkit-input-placeholder,
-.theme--dark.v-input textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .theme--dark.v-input input::-moz-placeholder,
 .theme--dark.v-input textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -16253,24 +16221,11 @@ html {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.theme--dark.v-input input::-ms-input-placeholder,
-.theme--dark.v-input textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.theme--dark.v-input input::-webkit-input-placeholder, .theme--dark.v-input textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .theme--dark.v-input input::-moz-placeholder, .theme--dark.v-input textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .theme--dark.v-input input:-ms-input-placeholder, .theme--dark.v-input textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.theme--dark.v-input input::-ms-input-placeholder, .theme--dark.v-input textarea::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
