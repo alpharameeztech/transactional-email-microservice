@@ -42856,12 +42856,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_with_api.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/1.png" } }),
       _vm._v(" "),
       _c("p", { staticClass: "font-weight-bold" }, [
         _vm._v(
@@ -42869,12 +42864,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/2.png" } }),
       _vm._v(" "),
       _c("v-system-bar", {
         attrs: { dark: "", color: "primary", height: "5" }
@@ -42916,12 +42906,7 @@ var render = function() {
       _vm._v(" "),
       _c("p", [_vm._v("Something like that will appear")]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_cli.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/3.png" } }),
       _vm._v(" "),
       _c("p", [
         _vm._v(
@@ -42935,12 +42920,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/4.png" } }),
       _vm._v(" "),
       _c("v-system-bar", {
         attrs: { dark: "", color: "primary", height: "5" }
@@ -42978,12 +42958,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/5.png" } }),
       _vm._v(" "),
       _c("v-system-bar", {
         attrs: { dark: "", color: "primary", height: "5" }
@@ -43045,21 +43020,11 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_api.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/6.png" } }),
         _vm._v(" "),
         _c("li", [_vm._v("\n            A log entry created\n        ")]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_log_entry.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/7.png" } }),
         _vm._v(" "),
         _c("li", [
           _vm._v(
@@ -43080,12 +43045,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/8.png" } }),
       _vm._v(" "),
       _c("v-system-bar", {
         attrs: { dark: "", color: "primary", height: "5" }
@@ -43121,12 +43081,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/9.png" } }),
         _vm._v(" "),
         _c("li", [
           _vm._v(
@@ -43134,12 +43089,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/10.png" } }),
         _vm._v(" "),
         _c("li", [
           _vm._v(
@@ -43164,12 +43114,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png"
-        }
-      }),
+      _c("img", { attrs: { src: "/img/11.png" } }),
       _vm._v(" "),
       _c("v-system-bar", {
         attrs: { dark: "", color: "primary", height: "5" }
@@ -43205,12 +43150,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/12.png" } }),
         _vm._v(" "),
         _c("li", [
           _vm._v(
@@ -43218,12 +43158,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("img", {
-          attrs: {
-            src:
-              "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png"
-          }
-        }),
+        _c("img", { attrs: { src: "/img/13.png" } }),
         _vm._v(" "),
         _c("li", [
           _vm._v(
@@ -43244,12 +43179,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png"
-        }
-      })
+      _c("img", { attrs: { src: "/img/14.png" } })
     ],
     1
   )

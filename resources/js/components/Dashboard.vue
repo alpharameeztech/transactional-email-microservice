@@ -195,13 +195,13 @@
 
         <p>Take a look at the below screenshot which shows how to call this API endpoint using Postman.</p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_with_api.png" />
+        <img src="/img/1.png" />
 
         <p class="font-weight-bold">
             If invalid data is provided on send email API, an appropriate error response is returned, something similar to the screenshot below
         </p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png" />
+        <img src="/img/2.png" />
 
         <v-system-bar
             dark
@@ -239,7 +239,7 @@
 
         <p>Something like that will appear</p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_cli.png" />
+        <img src="/img/3.png" />
 
         <p>
             If you do not provide any of required fields, an error will appear on the CLI asking you for the missing fields.
@@ -247,7 +247,7 @@
         <p>
             With CLI, only the log entry is created(as shown in the below screenshot) when the email is sent(wont be storing the under the database).
         </p>
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png" />
+        <img src="/img/4.png" />
 
         <v-system-bar
             dark
@@ -274,7 +274,7 @@
             <li>The entry will be saved under the 'sent_emails' table</li>
         </ul>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png" />
+        <img src="/img/5.png" />
 
         <v-system-bar
             dark
@@ -318,13 +318,13 @@
                 A json response received which will show the success message along with the service name used to send the welcome email
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_api.png" />
+            <img src="/img/6.png" />
 
             <li>
                 A log entry created
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_log_entry.png" />
+            <img src="/img/7.png" />
 
             <li>
                 User is successfully saved on the database
@@ -336,7 +336,7 @@
 
         <p class="font-weight-bold">If user registration failed for any reason, an appropriate error response is returned</p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png" />
+        <img src="/img/8.png" />
 
         <v-system-bar
             dark
@@ -363,13 +363,13 @@
                 A json response is returned with the appropriate status code and message
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png" />
+            <img src="/img/9.png" />
 
             <li>
                 A log entry is created on the 'laravel.log' file
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png" />
+            <img src="/img/10.png" />
 
             <li>
                 A password reset token is saved on the database table
@@ -386,7 +386,7 @@
             If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below
         </p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png" />
+        <img src="/img/11.png" />
 
         <v-system-bar
             dark
@@ -415,13 +415,13 @@
                 A json response is returned with the appropriate status code and message
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png" />
+            <img src="/img/12.png" />
 
             <li>
                 A log entry is created on the 'laravel.log' file
             </li>
 
-            <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png" />
+            <img src="/img/13.png" />
 
             <li>
                 A password reset token entry gets deleted(once the token is utilized)
@@ -436,7 +436,7 @@
             If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below
         </p>
 
-        <img src="https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png" />
+        <img src="/img/14.png" />
 
     </v-container>
 </template>
