@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\API;
-
+use App\Http\Controllers\API\ApiController;
 use App\Events\NewUserRegistered;
 use Illuminate\Http\Request;
 use App\User;
