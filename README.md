@@ -118,11 +118,11 @@ Once the email is send, then the following actions are taken:
 Take a look at the below screenshot which shows the success response when send a
 request to this API endpoint using Postman.
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_with_api.png)
+![1](https://user-images.githubusercontent.com/36469012/137141058-383ce726-30f3-49c2-9729-4b068faff2a3.png)
 
 **Note:**If invalid data is provided on send email API, an appropriate error response is returned, something similar to the screenshot below
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/error_response_on_send_email.png)
+![2](https://user-images.githubusercontent.com/36469012/137141292-cb03f546-0a55-464e-81c3-9cca58c63dfe.png)
 
 ## Send an email through CLI
 
@@ -145,13 +145,15 @@ Once you run the command, the CLI will prompt for the following fields:
  
 Something like that will appear
  
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_cli.png)
+![3](https://user-images.githubusercontent.com/36469012/137141352-41626e21-a0b0-446a-af05-e6ea4568614b.png)
+
 
 If you do not provide any of required fields, an error will appear on the CLI asking you for the missing fields.
 
 **With CLI, only the log entry is created(as shown in the below screenshot) when the email is sent(wont be storing the under the database)**.
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/cli_log_entery.png)
+![4](https://user-images.githubusercontent.com/36469012/137141452-6009f5b1-c492-4ed5-a78c-db52c2c4d68f.png)
+
 
 ## Send an email through Frontend
 
@@ -163,7 +165,7 @@ When the email is successfully sent, following actions are taken:
 - Record gets saved to the database   
 - A log entry is created under 'laravel.log' file
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/send_email_from_frontend.png)
+![5](https://user-images.githubusercontent.com/36469012/137141511-bd53ad9e-8f58-48c4-bce0-1cef53cc5425.png)
 
 ## Consumer self-service endpoint for user registration
 **API link:** ```[site.url]/api/v1/register```
@@ -181,15 +183,17 @@ This endpoint requires the following required fields:
 When the user is successfully registered, the actions are taken:
 
 - A json response received which will show the success message along with the service name used to send the welcome email
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_api.png)
+![6](https://user-images.githubusercontent.com/36469012/137141582-dd700a78-58ce-4541-8c21-dc4731f7cefb.png)
+
 - A log entry created
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_log_entry.png)
+![7](https://user-images.githubusercontent.com/36469012/137141738-3b01aa91-f13d-4e7e-abac-86a19ddd8f4f.png)
+
 - User is successfully saved on the database
 - A welcome email is sent to the user's email just registered
 
 **Note:** If user registration failed for any reason, an appropriate error response is returned as the screenshot below
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/user_registration_error.png)
+![8](https://user-images.githubusercontent.com/36469012/137141813-3f8819c7-99a7-4318-a1f7-9a7cd48d255a.png)
 
 ## Consumer self-service endpoint for forgot password
 
@@ -202,10 +206,10 @@ An API endpoint exist to generate a token for password recovery if the user is r
 When this API is called, following are the things that will happen:
 
 - A json response is returned with the appropriate status code and message
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token_api.png)
+![9](https://user-images.githubusercontent.com/36469012/137141950-e0fcc11d-073c-4738-9470-94cb4a7012a6.png)
 
 - A log entry is created on the 'laravel.log' file
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_token.png)
+![10](https://user-images.githubusercontent.com/36469012/137141994-959db812-b30a-4fe3-b16c-af2fe0433189.png)
 
 - A password reset token is saved on the database table
 
@@ -213,7 +217,7 @@ When this API is called, following are the things that will happen:
 
 **Note:** If invalid data is provided on forgot password api, an appropriate error response is returned, something similar to the screenshot below
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/forgot_password_error_on_invalid_data.png)
+![11](https://user-images.githubusercontent.com/36469012/137142106-8249b946-351e-4db3-965d-82e4277f9937.png)
 
 ## Consumer self-service endpoint for password reset
 
@@ -226,15 +230,17 @@ An API endpoint exist to reset a password based on the forgot password token.
 When this API is called, following are the things that will happen:
 
 - A json response is returned with the appropriate status code and message
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_success.png)
+![12](https://user-images.githubusercontent.com/36469012/137142150-83c15677-c076-44cf-855d-77d8debdd348.png)
 
 - A log entry is created on the 'laravel.log' file
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_log_entry.png)
+![13](https://user-images.githubusercontent.com/36469012/137142225-34493ce4-5aa4-46b9-ae56-bc62422ae0dd.png)
+
 - A password reset token entry gets deleted(once the token is utilized)
 - Password gets reset and saved on the database table
 
 **Note:** If invalid data is provided on reset password api, an appropriate error response is returned, something similar to the screenshot below
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/password_reset_failure.png)
+
+![14](https://user-images.githubusercontent.com/36469012/137142264-f5e2e9ea-522f-4b17-8602-6fd06047238c.png)
 
 ## About frontend
 
@@ -248,16 +254,16 @@ Frontend is a single page application built using Vue and Vuetify and it compose
 
 The Dashboard is a simple text page that describes about the application functionality.
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_dashboard.png)
+![15](https://user-images.githubusercontent.com/36469012/137142374-7c2a4f95-c043-479f-a96c-b6ffb5a018e5.png)
 
 **Compose Email:**
 
 This page includes a simple form to send an email.
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_composer_email.png)
+![16](https://user-images.githubusercontent.com/36469012/137142419-34e4d490-ba00-48c3-bf3a-e72c76af7f37.png)
 
 **Sent Emails:**
 
 The page will list all the emails that have been sent successfully.
 
-![Image description](https://somefreeresources.s3.ca-central-1.amazonaws.com/frontend_sent_emails.png)
+![17](https://user-images.githubusercontent.com/36469012/137142446-52215510-e9c5-4827-84cb-84e98a570859.png)
