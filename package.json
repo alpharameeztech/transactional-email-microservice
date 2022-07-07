@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "@mdi/font": "^4.9.95",
-        "moment": "^2.29.1",
+        "moment": "^2.29.4",
         "vue": "^2.6.14",
         "vue-read-more": "^1.1.1",
         "vue-router": "^3.5.2",
